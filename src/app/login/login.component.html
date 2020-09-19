@@ -1,0 +1,45 @@
+﻿<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-4  mt-5">
+            <img src="./assets/logo-monas.png" class="mt-5" alt="some text" width=200 height=100>
+        </div>
+
+
+
+        <div class="col-md-8 mt-5">
+
+            <div class="card">
+                <h4 class="card-header">Pomander</h4>
+                <div class="card-body">
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="text" formControlName="email" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Digite seu email.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" formControlName="password" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Digite sua senha.</div>
+                            </div>
+                        </div>
+                        <button [disabled]="loading" class="btn btn-dark">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Login
+                        </button>
+                        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
