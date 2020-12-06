@@ -1,0 +1,24 @@
+<mat-card>
+  <form (submit)="onAdicionarPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input required minlength="4" type="text" matInput placeholder="titulo" name="titulo" ngModel #titulo="ngModel" />
+      <mat-error *ngIf="titulo.invalid">Digite um titulo válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input required minlength="4" type="link" matInput placeholder="data" name="data" ngModel #data="ngModel" />
+      <mat-error *ngIf="data.invalid">Digite uma data válida</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input required minlength="4" type="link" matInput placeholder="imagem" name="imagem" ngModel #imagem="ngModel" />
+      <mat-error *ngIf="imagem.invalid">Digite um link válido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input required type="text" matInput placeholder="texto" name="texto" ngModel #texto="ngModel" />
+      <mat-error *ngIf="texto.invalid">Digite um texto válido</mat-error>
+    </mat-form-field>
+
+    <button color="primary" mat-raised-button>
+      Inserir Post
+    </button>
+  </form>
+</mat-card>

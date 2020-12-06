@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from './_services';
 import { User } from './_models';
+import { Post } from './post/post.model';
 
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
@@ -20,5 +21,10 @@ export class AppComponent {
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
+  }
+
+  posts: Post[] = [];
+  onPostAdicionado(post) {
+    this.posts = [...this.posts, post];
   }
 }

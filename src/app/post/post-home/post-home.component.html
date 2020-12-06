@@ -1,0 +1,86 @@
+<div class="container mt-1 text-center">
+  <img src="https://actinstitute.org/blog/wp-content/uploads/2016/10/banner-post-12-04-2016-1024x426.jpg"
+    alt="banner-post-12-04-2016-1024x426" class="image-fluid rounded">
+</div>
+
+<div class="container bg-white mt-1">
+
+  <div class="row">
+
+    <div class="col-8">
+
+      <div class="row">
+        <div class="card flex-row flex-wrap flex" *ngFor="let post of posts">
+
+          <img [src]="post.imagem" alt="Photo of {{post.imagem}}" width=200>
+
+          <div class="card-body col-12 col-sm-8" style="margin-left: 3rem;">
+            <div>
+              <h3 class="card-title">{{post.titulo}}</h3>
+              <p>{{post.data}}</p>
+              <p>{{post.texto}}</p>
+              <div>
+                <button class="btn btn-outline-dark">Leia Mais</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="row  d-flex justify-content-center">
+        <div class="btn-group">
+          <button class="btn btn-outline-dark">1</button>
+          <button class="btn btn-outline-dark">2</button>
+          <button class="btn btn-outline-dark">3</button>
+          <button class="btn btn-outline-dark">4</button>
+          <button class="btn btn-outline-dark">></button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="sidebar col-4">
+
+
+      <div class="widget widget_search mt-3">
+        <input type="text" class="form-control mr-2" placeholder="Buscar" />
+
+
+      </div>
+
+      <div class="widget mt-2">
+
+        <h3 class="card-title">Categorias</h3>
+        <ul class="list-unstyled">
+          <li class="mt-2">
+            <a href="#!">Link 1</a>
+          </li>
+          <li class="mt-2">
+            <a href="#!">Link 2</a>
+          </li>
+          <li class="mt-2">
+            <a href="#!">Link 3</a>
+          </li>
+          <li class="mt-2">
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
